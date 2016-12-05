@@ -1,0 +1,71 @@
+Q1:
+Hi there, I'd like to build an autocomplete search like on https://glose.com/bookstore. How can I build that kind of search using my PHP backend? Looking forward to hearing from you soon. Cheers, Jason
+
+A1:
+Hi Jason,
+
+Thanks for contacting our support team! The easiest way to render an autocomplete dropdown menu is by using our autocomplete.js Javascript library. It provides an easily configurable solution integrated with Algolia's search engine. You can find an excellent guide in our docs at https://www.algolia.com/doc/guides/search/auto-complete. It will walk you through the steps needed to:
+- import your dataset to Algolia
+- configure the ranking information
+- utilize autocomplete.js to develop a user interface
+
+The guide should help you get up and running, but please don't hesitate to reach out if you run into any specific configuration issues. Happy searching!!
+
+Cheers,
+Leran
+
+Q2:
+Hey We currently use swiftype. I'd like to learn what the main differences with respect to that. Thanks. Hugo.
+
+A2:
+Hi Hugo,
+
+Thanks for your interest in Algolia! The main difference between the site search tools is that Swiftype is a hosted search solution while Algolia is a search as a service offer. Swiftype has the benefit of an easy set-up, requiring very little code to implement, which targets less technical users. Algolia on the other hand, is a powerful API designed for developers to build realtime search in their web/mobile apps to optimize search speed. This gives Algolia users far more control in configuring their site search, and ensures they do not sacrfice performance as their application scales.
+
+I hope that helps clarify the differences between our products. If you would like to see how Algolia works in action, please visit our page and make a free account to enjoy a trial period. There you will find guides on how to implement the search engine to fit your application's needs!
+
+Cheers,
+Leran
+
+Q3: 
+Hello. Sorry to give you the kind of feedback that I know you do not want to hear, but I really hate the new design. Clearing and deleting indexes are now several clicks away. I am needing to use these features while iterating, so this is inconvenient. Also it would be great to access exporting Analytics data to a CSV or to access them via an API. Regards, Matt
+
+A3:
+Hi Matt,
+
+Sorry to hear about your frustrations with the new Algolia dashboard design! While the dashboard can be useful to get up and running quickly, utilizing our API is recommended as it will give you much more power in manipulating your data. As it turns out, clearing an index and atomical re-indexing are both methods that can be accessed through our API clients. You can check out our docs on these features at https://www.algolia.com/doc/guides/indexing/import-synchronize-data/. This should prove to be a much more convenient alternative to clearing/deleting indexes as you continue tweaking your configuration!
+
+Accessing Analyics data (export to csv or through API)
+
+Cheers,
+Leran
+
+Q4:
+Hi, we are looking at Algolia as an option to replace our CloudSearch. After looking at your pricing and documentation, I have a few questions about pricing and search
+
+Q4.1:
+We have three domains right now that contain different data. Would we be able to use a single Algolia account with different endpoints for each of those domains? For example, if we have fewer than 1M documents across the three domains, can we use a single Growth account?
+
+A4.1:
+Hi,
+
+I'm happy to provide you with more information regarding Algolia's pricing to help you decide which plan best suits your needs!
+
+All of our plans have no domain or app limitation, meaning you can use the same or different indices across all of your sites and apps. If you have fewer than 1M documents, then the Growth account will satisfy your needs from a records perspective. However, if you anticipate a large volume of operations significantly larger than 10M, you may want to consider the PRO account. Otherwise, you will be charged an extra 3 cents per 1000 additional operations. You can find more information about what counts as an operation at https://www.algolia.com/doc/guides/accounts-billing/billing.
+
+Q4.2:
+We have a staging environment that also has three domains. The size of our data in the staging environment is fairly close to production to test performance in a realistic way. Queries per second is obviously much, much lower. What is the pricing for a non-production environment?
+
+A4.2:
+The pricing for a staging environment is actually the same as a production environment because the same hardware setup is used. While this provides the same performance regardless of environment type, it unfortunately does not allow us to offer a discount.
+
+Q4.3:
+Does filtering on facets restrict the documents returned or the facets returned?
+
+A4.3:
+It restricts the documents returned by the specified list of facet values you want to use as refinements.
+
+Q4.4:
+If the answer to 3 is documents, can we filter on facets using ranges? Or alternatively, can we provide arrays for faceted attributes where we can return the document if any of the values in the array match the filter (similar to querying against array fields in MongoDB)? As an example scenario, we have categories containing sub-categories which contain products. When in the parent category, we need to be able to search products in all of its sub-categories. In the sub-categories, we need to be able to search products in only that sub-category. Let me know if anything is unclear. It looks like a great product so I'm excited to hear back!
+
+A4.4:
