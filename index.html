@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Restaurant Locator - by Algolia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <header>
+      <div id="search-input"></div>
+    </header>
+
+    <main>
+      <div id="left-column">
+        <div id="food_type" class="facet"></div>
+      </div>
+
+      <div id="right-column">
+        <div id="stats"></div>
+        <div id="hits"></div>
+        <div id="pagination"></div>
+      </div>
+    </main>
+
+    <script type="text/html" id="hit-template">
+      <div class="hit">
+        <div class="hit-image">
+          <img src="{{image_url}}" alt="{{name}}">
+        </div>
+        <div class="hit-content">
+          <h2 class="hit-name">{{{name}}}</h2>
+          <p class="hit-rating">{{{stars_count}}} ({{{reviews_count}}} reviews)</p>
+          <p class="hit-description">{{{food_type}}} | {{{neighborhood}}} | {{{price_range}}}</p>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/html" id="no-results-template">
+      <div id="no-results-message">
+        <p>We didn't find any results for the search <em>"{{query}}"</em>.</p>
+        <a href="." class="clear-all">Clear search</a>
+      </div>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
