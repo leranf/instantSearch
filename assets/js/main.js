@@ -1,14 +1,15 @@
 var search = instantsearch({
   appId: 'R5FNFOXMUS',
-  apiKey: 'bb54ffbf3bb6805fc86ebed846cff7ca', // search only API key, no ADMIN key
+  apiKey: 'bb54ffbf3bb6805fc86ebed846cff7ca',
   indexName: 'restaurants',
+  searchParameters: { aroundLatLngViaIP: true },
   urlSync: true
 });
 
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search-input',
-    placeholder: 'Search for products'
+    placeholder: 'Search for Restaurants by Name, Cuisine, Location'
   })
 );
 
