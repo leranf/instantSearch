@@ -16,20 +16,20 @@ header, main, #no-results {
 
 main {
   top: $header-height;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #left-column {
   float: left;
   width: 20%;
-  padding-right: 15px;
+  padding-right: 30px;
 }
 
 #right-column {
   float: right;
   width: 80%;
-  padding-left: 15px;
+  padding-left: 30px;
   border-left: 1px solid #E6E6E6;
 }
 
@@ -215,17 +215,26 @@ header {
   padding-top: 30px;
 
   .ais-stats--time {
-    font-size: 1.2em;
-    color: black;
+    div {
+      display: inline-block;
 
-    span {
-      font-size: 0.8em;
-      color: #999;
-    }
+      &.container {
+        font-size: 1.5vw;
+        color: black;
+        width: 30%;
+        padding-left: 0;
 
-    .stats-border {
-      width: 100%;
-      border-bottom: 2px solid #eee;
+        span {
+          font-size: 1vw;
+          color: #999;
+        }
+      }
+
+      &.stats-border {
+        width: 70%;
+        border-bottom: 2px solid #eee;
+        margin-bottom: -5px;
+      }
     }
   }
 }
