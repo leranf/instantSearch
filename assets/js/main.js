@@ -90,3 +90,8 @@ search.start();
 function getTemplate(templateName) {
   return document.getElementById(templateName + '-template').innerHTML;
 }
+
+document.getElementById('show-more-button').addEventListener('click', function() {
+  document.getElementById('show-more').style.visibility = "hidden";
+  document.getElementById('right-column').style.overflowY = "scroll"
+});
