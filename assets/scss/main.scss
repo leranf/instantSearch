@@ -11,19 +11,21 @@ html {
 
 header, main, #no-results {
   width: 100%;
-  position: fixed;
 }
 
 main {
+  position: relative;
   top: $header-height;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 #left-column {
+  position: fixed;
+  top: $header-height;
   float: left;
   width: 20%;
-  padding-right: 20px;
+  padding-right: 25px;
 }
 
 #right-column {
@@ -41,7 +43,9 @@ main {
 
 /* INPUT */
 header {
+  position: fixed;
   height: $header-height;
+  z-index: 1000;
 }
 
 #search-input {
