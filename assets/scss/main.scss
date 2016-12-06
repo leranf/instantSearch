@@ -85,7 +85,7 @@ header {
     
     .hit-image {
       display: inline-block;
-      width: 16%;
+      width: 9%;
       
       img {
         max-width: 100%;
@@ -94,24 +94,33 @@ header {
     }
     
     .hit-content {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 300;
       display: inline-block;
       width: 83%;
       margin-left: 1%;
       vertical-align: top;
+
+      h2, p {
+        margin-bottom: 5px;
+      }
       
       .hit-name {
         font-weight: normal;
         margin-top: 0;
+        font-size: 16px
       }
 
-      em {
-        font-style: normal;
-        background: #fbdde0;
+      .hit-rating--count {
+        color: #FFAB66;
+        padding-right: 5px;
       }
-      
-      .hit-description {
+
+      .hit-rating--reviews {
+        padding-left: 5px;
+      }
+
+      .hit-description, .hit-rating--reviews {
         color: #999;
       }
     }
