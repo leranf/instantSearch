@@ -22,7 +22,7 @@ main {
 #left-column {
   float: left;
   width: 20%;
-  padding-right: 30px; }
+  padding-right: 20px; }
 
 /* line 29, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 #right-column {
@@ -230,42 +230,42 @@ header {
     font-size: 14px;
     color: #333333; }
 
-/* line 263, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 259, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 .ais-refinement-list--label,
 .ais-menu--link {
-  font-size: 13px;
+  font-size: 1.1vw;
   line-height: 1.2;
   text-decoration: none;
   color: #000;
   cursor: pointer; }
 
-/* line 272, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 268, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 .ais-menu--item a, .ais-star-rating--item a {
   padding-left: 10px; }
-  /* line 275, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  /* line 271, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   .ais-menu--item a span, .ais-star-rating--item a span {
     padding-right: 10px; }
 
-/* line 281, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 277, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 .ais-menu--item:hover, .ais-menu--item__active,
 .ais-star-rating--item:hover, .ais-star-rating--item__active {
   background-color: #2897C5;
   border-radius: 5px;
   cursor: pointer; }
-  /* line 287, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  /* line 283, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   .ais-menu--item:hover a, .ais-menu--item__active a,
   .ais-star-rating--item:hover a, .ais-star-rating--item__active a {
     color: #FFFFFF; }
-    /* line 290, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+    /* line 286, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
     .ais-menu--item:hover a:hover, .ais-menu--item__active a:hover,
     .ais-star-rating--item:hover a:hover, .ais-star-rating--item__active a:hover {
       text-decoration: none; }
-    /* line 294, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+    /* line 290, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
     .ais-menu--item:hover a span, .ais-menu--item__active a span,
     .ais-star-rating--item:hover a span, .ais-star-rating--item__active a span {
       color: #FFFFFF; }
 
-/* line 300, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 296, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 .ais-refinement-list--count,
 .ais-menu--count,
 .ais-star-rating--count {
@@ -274,29 +274,29 @@ header {
   float: right;
   color: #9A9A9A; }
 
-/* line 309, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 305, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 .ais-star-rating--count {
   top: 0; }
 
 /* NO RESULTS */
-/* line 314, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 310, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 .no-results #pagination, .no-results #sort-by, .no-results #stats, .no-results #facets {
   display: none; }
 
-/* line 317, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 313, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 #no-results-message {
   text-align: center; }
 
-/* line 320, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 316, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 #no-results-message p {
   font-size: 28px;
   font-weight: 100; }
 
-/* line 324, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 320, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 #no-results-message ul {
   list-style-type: none; }
 
-/* line 327, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 323, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 #no-results-message li {
   font-size: 12px;
   position: relative;
@@ -307,12 +307,12 @@ header {
   border: 1px solid #ddd;
   border-radius: 12px; }
 
-/* line 337, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 333, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 #no-results-message li span.value {
   font-weight: bold;
   color: #000; }
 
-/* line 341, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 337, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 #no-results-message li a.remove img {
   position: absolute;
   top: 3px;
@@ -322,11 +322,11 @@ header {
   height: 17px;
   opacity: .5; }
 
-/* line 350, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 346, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 #no-results-message li a.remove:hover img {
   opacity: 1; }
 
-/* line 353, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 349, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 a.clear-all {
   font-size: 12px;
   line-height: 1;
@@ -338,7 +338,7 @@ a.clear-all {
   border: 2px solid #ddd;
   border-radius: 4px; }
 
-/* line 364, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+/* line 360, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 a.clear-all:hover {
   transition: border-color .3s ease-in;
   border-color: #999; }
