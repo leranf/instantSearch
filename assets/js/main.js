@@ -36,7 +36,7 @@ search.addWidget(
     container: '#stats',
     templates: {
       body: function(data) {
-        return '<div>' + data.nbHits + ' results found <span>in ' + data.processingTimeMS / 1000 + ' seconds</span></div>'
+        return '<div class="ais-stats--time">' + data.nbHits + ' results found <span>in ' + data.processingTimeMS / 1000 + ' seconds</span><span class="stats-border"></span></div>'
       }
     }
   })
@@ -55,7 +55,7 @@ search.addWidget(
     limit: 7,
     sortBy: ['isRefined', 'count:desc', 'name:asc'],
     templates: {
-      header: '<h5>Cuisine/Food Type</h5>',
+      header: '<h5 class="facet_type">Cuisine/Food Type</h5>',
     }
   })
 );
