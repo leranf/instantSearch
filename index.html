@@ -37,11 +37,11 @@
         <div class="hit-content">
           <h2 class="hit-name">{{{name}}}</h2>
           <p class="hit-rating">
-            {{{stars_count}}}
+            <span class="hit-rating--count">{{{stars_count}}}</span>
             {{#stars}}
               <span class="ais-star-rating--star{{^.}}__empty{{/.}}"></span>
             {{/stars}}
-            ({{{reviews_count}}} reviews)
+            <span class="hit-rating--reviews">({{{reviews_count}}} reviews)</span>
           </p>
           <p class="hit-description">{{{food_type}}} | {{{neighborhood}}} | {{{price_range}}}</p>
         </div>
