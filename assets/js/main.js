@@ -20,13 +20,25 @@ search.addWidget(
     templates: {
       item: getTemplate('hit'),
       empty: getTemplate('no-results')
+    },
+    transformData: function(hit) {
+      hit.stars = [];
+      for (var i = 1; i <= 5; ++i) {
+        hit.stars.push(i <= hit.stars_count);
+      }
+      return hit;
     }
   })
 );
 
 search.addWidget(
   instantsearch.widgets.stats({
-    container: '#stats'
+    container: '#stats',
+    templates: {
+      body: function(data) {
+        return '<div>' + data.nbHits + ' results found <span>in ' + data.processingTimeMS / 1000 + ' seconds</span></div>'
+      }
+    }
   })
 );
 
@@ -43,7 +55,7 @@ search.addWidget(
     limit: 7,
     sortBy: ['isRefined', 'count:desc', 'name:asc'],
     templates: {
-      header: '<h5>Food Type</h5>',
+      header: '<h5>Cuisine/Food Type</h5>',
     }
   })
 );
@@ -52,6 +64,9 @@ search.addWidget(
   instantsearch.widgets.starRating({
     container: '#rating',
     attributeName: 'stars_count',
+    labels: {
+      andUp: ''
+    },
     templates: {
       header: '<h5>Rating</h5>'
     }

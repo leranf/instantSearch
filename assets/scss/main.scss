@@ -1,4 +1,6 @@
 /* GENERAL */
+$header-height: 80px;
+
 * {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
@@ -8,22 +10,27 @@ html {
 }
 
 header, main, #no-results {
-  width: 1000px;
-  margin: 0 auto;
+  width: 100%;
+  position: fixed;
 }
 
 main {
-  min-height: 360px;
+  top: $header-height;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #left-column {
   float: left;
-  width: 23%;
+  width: 25%;
+  padding-right: 15px;
 }
 
 #right-column {
-  width: 74%;
-  margin-left: 26%;
+  float: right;
+  width: 75%;
+  padding-left: 15px;
+  border-left: 1px solid #E6E6E6;
 }
 
 .clear:after {
@@ -34,37 +41,25 @@ main {
 
 /* INPUT */
 header {
-  position: relative;
-  height: 80px;
-  margin-top: 40px;
-  
-  img {
-    position: absolute;
-    top: 9px;
-    left: 0;
-    float: left;
-    max-width: 23%;
-  }
+  height: $header-height;
 }
 
 #search-input {
-  input {
-    font-size: 28px;
-    font-weight: 100;
-    width: 74%;
-    margin-left: 26%;
-    padding: 10px 0 6px;
-    border: none;
-    border-bottom: 5px solid #eee;
-    
-    &:focus {
-      border-color: #ed5565;
-    }
-  }
+  background-color: #1C688E;
+  height: $header-height;
+  padding: 20px 25px;
+  
+  .ais-search-box {
+    height: 100%;
 
-  input, input:focus {
-    transition: border-color .3s ease-in;
-    outline: 0;
+    input {
+      height: 100%;
+      width: 100%;
+      color: #B3B3B3;
+      font-size: 15px;
+      border: 0;
+      padding-left: 15px;
+    }
   }
   
   &::-webkit-input-placeholder, &:-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder {
@@ -213,7 +208,7 @@ header {
 
 /* STATS */
 #stats {
-
+  padding-top: 30px;
 }
 
 #stats .ais-stats--time {
@@ -224,6 +219,10 @@ header {
 /* FACETS */
 .facet {
   margin-bottom: 24px;
+
+  &#food_type {
+    padding-top: 30px;
+  }
 }
 .facet h5 {
   margin: 0 0 6px;
