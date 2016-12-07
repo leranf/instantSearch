@@ -20,9 +20,9 @@ Hey We currently use swiftype. I'd like to learn what the main differences with 
 A2:
 Hi Hugo,
 
-Thanks for your interest in Algolia! The main difference between the site search tools is that Swiftype is a hosted search solution while Algolia is a search as a service offer. Swiftype has the benefit of an easy set-up, requiring very little code to implement, which targets less technical users. Algolia on the other hand, is a powerful API designed for developers to build realtime search in their web/mobile apps to optimize search speed. This gives Algolia users far more control in configuring their site search, and ensures they do not sacrfice performance as their application scales.
+Thanks for your interest in Algolia! That's a great question I'd love to help clarify. To start, Swiftype is a hosted search solution while Algolia is a search as a service offer. Swiftype can be implemented with very little code, which highly benefits less technical users, while Algolia is a powerful API designed for developers. Algolia gives its users the tools to build a highly configurable and incredibly fast realtime search in their web/mobile apps. This gives them ultimate conrol over their site search experience, whereas Swiftype is a more out-of-the-box solution. 
 
-I hope that helps clarify the differences between our products. If you would like to see how Algolia works in action, please visit our page and make a free account to enjoy a trial period. There you will find guides on how to implement the search engine to fit your application's needs!
+I hope that helps clarify the differences between our products. If you would like to see how Algolia works in action, please visit our page and make a free account to enjoy a 14 day trial period. Our docs offer many guides on how to implement the search engine to fit your application's needs!
 
 Cheers,
 Leran
@@ -35,7 +35,9 @@ Hi Matt,
 
 Sorry to hear about your frustrations with the new Algolia dashboard design! While the dashboard can be useful to get up and running quickly, utilizing our API is recommended as it will give you much more power in manipulating your data. As it turns out, clearing an index and atomical re-indexing are both methods that can be accessed through our API clients. You can check out our docs on these features at https://www.algolia.com/doc/guides/indexing/import-synchronize-data/. This should prove to be a much more convenient alternative to clearing/deleting indexes as you continue tweaking your configuration!
 
-Accessing Analyics data (export to csv or through API)
+As for accessing analyics data, you can opt to either download csv files through the dashboard, or use our API. While you won't be able to access your data through one of the API clients, you can make requests directly to the REST API!
+
+Hopefully this information will alleviate some of your current frustrations with the product, but if you have any other suggestions/comments, we would absolutely welcome the feedback! We are constantly trying to improve the experience for our customers.
 
 Cheers,
 Leran
@@ -57,7 +59,7 @@ Q4.2:
 We have a staging environment that also has three domains. The size of our data in the staging environment is fairly close to production to test performance in a realistic way. Queries per second is obviously much, much lower. What is the pricing for a non-production environment?
 
 A4.2:
-The pricing for a staging environment is actually the same as a production environment because the same hardware setup is used. While this provides the same performance regardless of environment type, it unfortunately does not allow us to offer a discount.
+The pricing for a staging environment is actually the same as a production environment because the same hardware setup is used both cases. We do this to ensure the same performance regardless of environment type, but unfortunately does not allow us to offer a discount.
 
 Q4.3:
 Does filtering on facets restrict the documents returned or the facets returned?
@@ -69,3 +71,9 @@ Q4.4:
 If the answer to 3 is documents, can we filter on facets using ranges? Or alternatively, can we provide arrays for faceted attributes where we can return the document if any of the values in the array match the filter (similar to querying against array fields in MongoDB)? As an example scenario, we have categories containing sub-categories which contain products. When in the parent category, we need to be able to search products in all of its sub-categories. In the sub-categories, we need to be able to search products in only that sub-category. Let me know if anything is unclear. It looks like a great product so I'm excited to hear back!
 
 A4.4:
+Yes, you can filter your results in any way you like! Our API is built with extensibility in mind, allowing you to build your own custom filters. I would recommend checking out our instantsearch.js docs at https://community.algolia.com/instantsearch.js/documentation/. There you will find information about our library with which you can build the perfect UI for your high-performance search experience by configuring a set of individual UI components, also known as widgets. There are a set of widgets already built into the core library such as searchBox, hits, and menu. In fact, there is a hierarchicalMenu widget that would be ideal for your example scenario! If you have a special use case that we have no accomadated for, you can actually build your own custom widget!
+
+I hope this helps give you a better picture of the pricing structure and search features that we offer at Algolia. If you have any further questions, please don't hesitate to reach out. Also, if you want to see the search engine in action, feel free to create an acount and enjoy a 14 day trial period. Our docs offer many guides on how to get you up and running to build the ultimate site search experience for your users!
+
+Cheers,
+Leran
