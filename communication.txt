@@ -22,7 +22,7 @@ Hi Hugo,
 
 Thanks for your interest in Algolia! That's a great question I'd love to help clarify. To start, Swiftype is a hosted search solution while Algolia is a search as a service offer. Swiftype can be implemented with very little code, which highly benefits less technical users, while Algolia is a powerful API designed for developers. Algolia gives its users the tools to build a highly configurable and incredibly fast realtime search in their web/mobile apps. This gives them ultimate conrol over their site search experience, whereas Swiftype is a more out-of-the-box solution. 
 
-I hope that helps clarify the differences between our products. If you would like to see how Algolia works in action, please visit our page and make a free account to enjoy a 14 day trial period. Our docs offer many guides on how to implement the search engine to fit your application's needs!
+I hope that helps clarify the differences between our products. If you would like to see Algolia working in action, please visit our page and create an account to enjoy a free 14 day trial period. Our docs offer many guides on how to implement the search engine to fit your application's needs!
 
 Cheers,
 Leran
@@ -45,33 +45,34 @@ Leran
 Q4:
 Hi, we are looking at Algolia as an option to replace our CloudSearch. After looking at your pricing and documentation, I have a few questions about pricing and search
 
+A4:
+Hi,
+
+Thanks for your interest in Algolia! I'm happy to answer your questions regarding Algolia's pricing and search features to help you make an informed decision on whether we are the right product for you, and if so, which plan best suits your needs.
+
 Q4.1:
 We have three domains right now that contain different data. Would we be able to use a single Algolia account with different endpoints for each of those domains? For example, if we have fewer than 1M documents across the three domains, can we use a single Growth account?
 
 A4.1:
-Hi,
-
-I'm happy to provide you with more information regarding Algolia's pricing to help you decide which plan best suits your needs!
-
 All of our plans have no domain or app limitation, meaning you can use the same or different indices across all of your sites and apps. If you have fewer than 1M documents, then the Growth account will satisfy your needs from a records perspective. However, if you anticipate a large volume of operations significantly larger than 10M, you may want to consider the PRO account. Otherwise, you will be charged an extra 3 cents per 1000 additional operations. You can find more information about what counts as an operation at https://www.algolia.com/doc/guides/accounts-billing/billing.
 
 Q4.2:
 We have a staging environment that also has three domains. The size of our data in the staging environment is fairly close to production to test performance in a realistic way. Queries per second is obviously much, much lower. What is the pricing for a non-production environment?
 
 A4.2:
-The pricing for a staging environment is actually the same as a production environment because the same hardware setup is used both cases. We do this to ensure the same performance regardless of environment type, but unfortunately does not allow us to offer a discount.
+The pricing for a staging environment is actually the same as a production environment because the same hardware setup is used in both cases. We do this to ensure the same performance regardless of environment type, but unfortunately does not allow us to offer a discount.
 
 Q4.3:
 Does filtering on facets restrict the documents returned or the facets returned?
 
 A4.3:
-It restricts the documents returned by the specified list of facet values you want to use as refinements.
+Filtering on facets restricts the documents returned by the specified list of facet values you want to use as refinements.
 
 Q4.4:
 If the answer to 3 is documents, can we filter on facets using ranges? Or alternatively, can we provide arrays for faceted attributes where we can return the document if any of the values in the array match the filter (similar to querying against array fields in MongoDB)? As an example scenario, we have categories containing sub-categories which contain products. When in the parent category, we need to be able to search products in all of its sub-categories. In the sub-categories, we need to be able to search products in only that sub-category. Let me know if anything is unclear. It looks like a great product so I'm excited to hear back!
 
 A4.4:
-Yes, you can filter your results in any way you like! Our API is built with extensibility in mind, allowing you to build your own custom filters. I would recommend checking out our instantsearch.js docs at https://community.algolia.com/instantsearch.js/documentation/. There you will find information about our library with which you can build the perfect UI for your high-performance search experience by configuring a set of individual UI components, also known as widgets. There are a set of widgets already built into the core library such as searchBox, hits, and menu. In fact, there is a hierarchicalMenu widget that would be ideal for your example scenario! If you have a special use case that we have no accomadated for, you can actually build your own custom widget!
+Yes, you can filter your results in any way you like! Our API is built with extensibility in mind, allowing you to build your own custom filters. I would recommend checking out our instantsearch.js docs at https://community.algolia.com/instantsearch.js/documentation/. There you will find information about our library with which you can build the perfect UI for your high-performance search experience by configuring a set of individual UI components, also known as widgets. There are a set of widgets already built into the core library such as searchBox, hits, and menu for basic functionality, and there's actually a hierarchicalMenu widget that would be ideal for your example scenario! If you have a special use case that we have no accommodated for, you can actually build your own custom widget!
 
 I hope this helps give you a better picture of the pricing structure and search features that we offer at Algolia. If you have any further questions, please don't hesitate to reach out. Also, if you want to see the search engine in action, feel free to create an acount and enjoy a 14 day trial period. Our docs offer many guides on how to get you up and running to build the ultimate site search experience for your users!
 
