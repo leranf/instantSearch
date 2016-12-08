@@ -99,18 +99,23 @@ search.addWidget(
   })
 );
 
+var clickedShowMore = false;
+
 search.start();
 search.on('render', function() {
-  var divs = Array.prototype.slice.call(document.querySelectorAll('.show-more'));
-  divs.forEach(function(div) {
-    div.style.visibility = 'visible';
-    div.children[0].addEventListener('click', function() {
-      divs.forEach(function(div) {
-        div.style.visibility = "hidden";
+  if (!clickedShowMore) {
+    var divs = Array.prototype.slice.call(document.querySelectorAll('.show-more'));
+    divs.forEach(function(div) {
+      div.style.visibility = 'visible';
+      div.children[0].addEventListener('click', function() {
+        clickedShowMore = true;
+        divs.forEach(function(div) {
+          div.style.visibility = "hidden";
+        });
+        document.getElementById('right-column').style.overflowY = "scroll";
       });
-      document.getElementById('right-column').style.overflowY = "scroll";
     });
-  });
+  }
 });
 
 function getTemplate(templateName) {
