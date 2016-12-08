@@ -108,8 +108,8 @@ header {
       font-size: 14px;
       font-weight: 300;
       display: inline-block;
-      width: 83%;
-      margin-left: 1%;
+      width: 325px;
+      margin-left: 10px;
       vertical-align: top;
 
       h2, p {
@@ -262,7 +262,6 @@ header {
       &.container {
         font-size: 1.5vw;
         color: black;
-        width: 30%;
         padding-left: 0;
 
         span {
@@ -272,7 +271,6 @@ header {
       }
 
       &.stats-border {
-        width: 70%;
         border-bottom: 2px solid #eee;
         margin-bottom: -5px;
       }
@@ -292,6 +290,7 @@ header {
 
       &:hover {
         text-decoration: none;
+        cursor: pointer;
       }
     }
   }
@@ -316,7 +315,7 @@ header {
 
 .ais-refinement-list--label,
 .ais-menu--link {
-  font-size: 1.1vw;
+  font-size: 1vw;
   line-height: 1.2;
   text-decoration: none;
   color: #000;
@@ -358,10 +357,11 @@ header {
   top: 3px;
   float: right;
   color: #9A9A9A;
+  font-size: 1vw;
 }
 
 .ais-star-rating--count {
-  top: 0;
+  top: 1px;
 }
 
 /* NO RESULTS */
@@ -419,4 +419,72 @@ a.clear-all {
   background-color: red;
   border: 2px solid red;
   border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+  #left-column {
+    width: 25%;
+  }
+
+  #right-column {
+    width: 75%;
+  }
+
+  #stats {
+    .container {
+      width: 34%;
+    }
+    .stats-border {
+      width: 66%;
+    }
+  }
+}
+
+@media (max-width: 715px) {
+  #stats {
+    .container {
+      width: 36%;
+    }
+    .stats-border {
+      width: 64%;
+    }
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  #left-column {
+    width: 22%;
+  }
+
+  #right-column {
+    width: 78%;
+  }
+
+  #stats {
+    .container {
+      width: 32%;
+    }
+    .stats-border {
+      width: 68%;
+    }
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+  #left-column {
+    width: 20%;
+  }
+
+  #right-column {
+    width: 80%;
+  }
+
+  #stats {
+    .container {
+      width: 30%;
+    }
+    .stats-border {
+      width: 70%;
+    }
+  }
 }
