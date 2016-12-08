@@ -86,9 +86,21 @@ search.addWidget(
   })
 );
 
+search.addWidget(
+  instantsearch.widgets.clearAll({
+    container: '#clear-all',
+    templates: {
+      link: '<i class="fa fa-eraser"></i> Clear all filters'
+    },
+    cssClasses: {
+      root: 'btn btn-block btn-default'
+    },
+    autoHideContainer: true
+  })
+);
+
 search.start();
 search.once('render', function() {
-  var buttons = Array.prototype.slice.call(document.querySelectorAll('.show-more-button'));
   var divs = Array.prototype.slice.call(document.querySelectorAll('.show-more'));
   divs.forEach(function(div) {
     div.style.visibility = 'visible';

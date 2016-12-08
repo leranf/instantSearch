@@ -280,8 +280,25 @@ header {
   }
 }
 
+/* CLEAR ALL */
+#clear-all {
+  padding-top: 30px;
+
+  .ais-clear-all {
+    background-color: rgb(237, 85, 101);
+
+    a {
+      color: white;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
 
 /* FACETS */
+
 .facet {
   margin-bottom: 24px;
 
