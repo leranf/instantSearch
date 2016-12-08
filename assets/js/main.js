@@ -90,7 +90,7 @@ search.addWidget(
   instantsearch.widgets.clearAll({
     container: '#clear-all',
     templates: {
-      link: '<i class="fa fa-eraser"></i> Clear all filters'
+      link: '<i class="fa fa-eraser"></i> CLEAR FILTERS'
     },
     cssClasses: {
       root: 'btn btn-block btn-default'
