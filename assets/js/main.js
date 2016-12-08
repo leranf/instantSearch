@@ -100,7 +100,7 @@ search.addWidget(
 );
 
 search.start();
-search.once('render', function() {
+search.on('render', function() {
   var divs = Array.prototype.slice.call(document.querySelectorAll('.show-more'));
   divs.forEach(function(div) {
     div.style.visibility = 'visible';
