@@ -19,13 +19,14 @@ search.addWidget(
     hitsPerPage: 10,
     templates: {
       item: getTemplate('hit'),
-      empty: getTemplate('no-results')
+      empty: getTemplate('no-results'),
     },
     transformData: function(hit) {
       hit.stars = [];
       for (var i = 1; i <= 5; ++i) {
         hit.stars.push(i <= hit.stars_count);
       }
+
       return hit;
     }
   })
@@ -86,12 +87,20 @@ search.addWidget(
 );
 
 search.start();
+search.once('render', function() {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.show-more-button'));
+  var divs = Array.prototype.slice.call(document.querySelectorAll('.show-more'));
+  divs.forEach(function(div) {
+    div.style.visibility = 'visible';
+    div.children[0].addEventListener('click', function() {
+      divs.forEach(function(div) {
+        div.style.visibility = "hidden";
+      });
+      document.getElementById('right-column').style.overflowY = "scroll";
+    });
+  });
+});
 
 function getTemplate(templateName) {
   return document.getElementById(templateName + '-template').innerHTML;
 }
-
-document.getElementById('show-more-button').addEventListener('click', function() {
-  document.getElementById('show-more').style.visibility = "hidden";
-  document.getElementById('right-column').style.overflowY = "scroll"
-});
