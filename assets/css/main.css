@@ -284,7 +284,7 @@ header {
 /* line 316, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 .ais-refinement-list--label,
 .ais-menu--link {
-  font-size: 1vw;
+  font-size: 1.1vw;
   line-height: 1.2;
   text-decoration: none;
   color: #000;
@@ -324,7 +324,7 @@ header {
   top: 3px;
   float: right;
   color: #9A9A9A;
-  font-size: 1vw; }
+  font-size: 1.1vw; }
 
 /* line 363, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
 .ais-star-rating--count {
