@@ -24,7 +24,6 @@ html, body {
     bottom: 50px;
     left: 100px;
     right: 100px;
-    overflow: hidden;
     background-color: white;
   }
 }
@@ -34,22 +33,23 @@ main {
   top: $header-height;
   left: 0;
   right: 0;
-  height: 100%;
+  bottom: 0;
 }
 
 #left-column {
-  position: relative;
-  float: left;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 30%;
-  height: 100%;
   padding-right: 25px;
   padding-left: 20px;
-  overflow-y: scroll;
+  overflow-y: scroll ;
 }
 
 #right-column {
-  position: relative;
-  float: left;
+  position: absolute;
+  left: 30%;
   width: 70%;
   padding-left: 30px;
   border-left: 1px solid #E6E6E6;
@@ -113,7 +113,6 @@ header {
   .hit {
     font-size: 0;
     padding: 8px 0;
-    border-bottom: 1px solid #eee;
     
     .hit-image {
       display: inline-block;
