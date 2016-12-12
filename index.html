@@ -11,24 +11,30 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-    <header>
-      <div id="search-input"></div>
-    </header>
+    <div id="content-container">
+      <div id="search-container">
+        <header>
+          <div id="search-input"></div>
+        </header>
+        
+        <main>
+          <div id="left-column">
+            <div id="clear-all"></div>
+            <div id="food_type" class="facet"></div>
+            <div id="rating" class="facet"></div>
+            <div id="payment_options" class="facet"></div>
+          </div>
 
-    <main>
-      <div id="left-column">
-        <div id="clear-all"></div>
-        <div id="food_type" class="facet"></div>
-        <div id="rating" class="facet"></div>
-        <div id="payment_options" class="facet"></div>
+          <div id="right-column">
+            <div id="stats"></div>
+            <div id="hits"></div>
+            <div id="pagination"></div>
+          </div>
+        </main>
       </div>
 
-      <div id="right-column">
-        <div id="stats"></div>
-        <div id="hits"></div>
-        <div id="pagination"></div>
-      </div>
-    </main>
+
+    </div>
 
     <script type="text/html" id="hit-template">
       <div class="hit">
@@ -46,9 +52,9 @@
           </p>
           <p class="hit-description">{{{food_type}}} | {{{neighborhood}}} | {{{price_range}}}</p>
         </div>
-        <div class="show-more">
+        <!-- <div class="show-more">
           <button class="show-more-button">Show More</button>
-        </div>
+        </div> -->
       </div>
     </script>
 
