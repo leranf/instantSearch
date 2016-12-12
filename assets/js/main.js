@@ -37,7 +37,7 @@ search.addWidget(
     container: '#stats',
     templates: {
       body: function(data) {
-        return '<div class="ais-stats--time"><div class="container">' + data.nbHits + ' results found <span>in ' + data.processingTimeMS / 1000 + ' seconds</span></div><div class="stats-border"></div></div>'
+        return '<div class="ais-stats--time"><div class="container">' + data.nbHits + ' results found <span>in ' + data.processingTimeMS / 1000 + ' seconds</span><div class="stats-border"></div></div></div>'
       }
     }
   })
