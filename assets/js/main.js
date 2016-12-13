@@ -44,12 +44,6 @@ search.addWidget(
 );
 
 search.addWidget(
-  instantsearch.widgets.pagination({
-    container: '#pagination'
-  })
-);
-
-search.addWidget(
   instantsearch.widgets.menu({
     container: '#food_type',
     attributeName: 'food_type',
@@ -102,19 +96,26 @@ search.addWidget(
 var clickedShowMore = false;
 
 search.start();
+// search.on('render', function() {
+//   if (!clickedShowMore) {
+//     var divs = Array.prototype.slice.call(document.querySelectorAll('.show-more'));
+//     divs.forEach(function(div) {
+//       div.style.visibility = 'visible';
+//       div.children[0].addEventListener('click', function() {
+//         clickedShowMore = true;
+//         divs.forEach(function(div) {
+//           div.style.visibility = "hidden";
+//         });
+//         document.getElementById('right-column').style.overflowY = "scroll";
+//       });
+//     });
+//   }
+// });
+
 search.on('render', function() {
-  if (!clickedShowMore) {
-    var divs = Array.prototype.slice.call(document.querySelectorAll('.show-more'));
-    divs.forEach(function(div) {
-      div.style.visibility = 'visible';
-      div.children[0].addEventListener('click', function() {
-        clickedShowMore = true;
-        divs.forEach(function(div) {
-          div.style.visibility = "hidden";
-        });
-        document.getElementById('right-column').style.overflowY = "scroll";
-      });
-    });
+  if (!$('.show-more')[0]) {
+    var hits = $('.ais-hits');
+    hits.append('<div class="show-more"><button class="show-more-button">Show More</button></div>');
   }
 });
 
