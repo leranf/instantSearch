@@ -9,14 +9,18 @@ html, body {
   height: 100%;
 }
 
+body {
+  background-image: url('../../resources/graphics/background.png');
+  background-repeat: repeat;
+}
+
 #content-container {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../../resources/graphics/background.png');
-  background-repeat: repeat;
+  max-width: 1280px;
 
   #search-container {
     position: absolute;
@@ -44,7 +48,7 @@ main {
   width: 30%;
   padding-right: 25px;
   padding-left: 20px;
-  overflow-y: scroll ;
+  overflow-y: scroll;
 }
 
 #right-column {
@@ -160,13 +164,8 @@ header {
 }
 
 .show-more {
-  position: fixed;
-  visibility: hidden;
-  top: 482px;
   width: 100%;
-  height: 100%;
   z-index: 1000;
-  background-color: white;
   text-align: center;
 
   button {
@@ -174,7 +173,6 @@ header {
     width: 184px;
     font-size: 14px;
     margin-top: 30px;
-    margin-left: -184px;
     border-radius: 5px;
     border: 1px solid #E6E6E6;
     color: #000000;
