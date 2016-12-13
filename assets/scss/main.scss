@@ -454,6 +454,15 @@ a.clear-all {
   border-radius: 4px;
 }
 
+@media (min-width: 768px) and (max-width: 827px) {
+  #content-container {
+    #search-container {
+      left: 50px;
+      right: 50px;
+    }
+  }
+}
+
 @media (max-width: 960px) {
   #left-column {
     width: 100%;
@@ -484,9 +493,9 @@ a.clear-all {
       }
     }
   } 
-} 
+}
 
-@media (min-width: 320px) and (max-width: 820px) {
+@media (min-width: 320px) and (max-width: 767px) {
   #content-container {
     #search-container {
       top: 25px;

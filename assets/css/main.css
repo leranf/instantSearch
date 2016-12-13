@@ -424,58 +424,64 @@ a.clear-all {
   border: 2px solid red;
   border-radius: 4px; }
 
+@media (min-width: 768px) and (max-width: 827px) {
+  /* line 459, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  #content-container #search-container {
+    left: 50px;
+    right: 50px; } }
+
 @media (max-width: 960px) {
-  /* line 458, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  /* line 467, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   #left-column {
     width: 100%;
     bottom: auto; }
-    /* line 462, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+    /* line 471, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
     #left-column #rating {
       padding-left: 10px;
       padding-right: 10px; }
-    /* line 467, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+    /* line 476, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
     #left-column .facet {
       display: inline-table;
       width: 32.5%; }
-  /* line 473, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  /* line 482, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   #right-column {
     width: 100%;
     top: 221px;
     left: 0;
     border: none; }
-    /* line 479, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+    /* line 488, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
     #right-column #stats {
       padding-top: 0; }
-      /* line 482, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+      /* line 491, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
       #right-column #stats .stats-border {
         top: 16px; } }
 
-@media (min-width: 320px) and (max-width: 820px) {
-  /* line 491, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+@media (min-width: 320px) and (max-width: 767px) {
+  /* line 500, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   #content-container #search-container {
     top: 25px;
     bottom: 25px;
     left: 25px;
     right: 25px; }
-  /* line 501, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  /* line 510, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   #search-input .ais-search-box input {
     font-size: 11px; }
-  /* line 508, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  /* line 517, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   #left-column .facet {
     width: 32%; }
-    /* line 511, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+    /* line 520, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
     #left-column .facet h5 {
       font-size: 10px; }
-  /* line 517, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  /* line 526, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   .ais-menu-link {
     font-size: 8px; }
-  /* line 521, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  /* line 530, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   .ais-menu--count,
   .ais-star-rating--count {
     display: none; } }
 
 @media (min-width: 1280px) {
-  /* line 528, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
+  /* line 537, /Users/leranfirer/Documents/instantSearch/assets/scss/main.scss */
   #search-container {
     width: 1080px;
     margin-left: auto;
