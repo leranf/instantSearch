@@ -1,8 +1,12 @@
+var pageNumber = 0;
 var search = instantsearch({
   appId: 'R5FNFOXMUS',
   apiKey: 'bb54ffbf3bb6805fc86ebed846cff7ca',
   indexName: 'restaurants',
-  searchParameters: { aroundLatLngViaIP: true },
+  searchParameters: {
+    aroundLatLngViaIP: true,
+    page: pageNumber,
+  },
   urlSync: true
 });
 
@@ -31,6 +35,12 @@ search.addWidget(
     }
   })
 );
+
+// search.addWidget(
+//   instantsearch.widgets.pagination({
+//     container: '#pagination'
+//   })
+// );
 
 search.addWidget(
   instantsearch.widgets.stats({
@@ -93,30 +103,26 @@ search.addWidget(
   })
 );
 
-var clickedShowMore = false;
-
 search.start();
-// search.on('render', function() {
-//   if (!clickedShowMore) {
-//     var divs = Array.prototype.slice.call(document.querySelectorAll('.show-more'));
-//     divs.forEach(function(div) {
-//       div.style.visibility = 'visible';
-//       div.children[0].addEventListener('click', function() {
-//         clickedShowMore = true;
-//         divs.forEach(function(div) {
-//           div.style.visibility = "hidden";
-//         });
-//         document.getElementById('right-column').style.overflowY = "scroll";
-//       });
-//     });
-//   }
-// });
 
 search.on('render', function() {
-  if (!$('.show-more')[0]) {
+  pageNumber = 0;
+  if (!$('#show-more')[0]) {
     var hits = $('.ais-hits');
-    hits.append('<div class="show-more"><button class="show-more-button">Show More</button></div>');
+    hits.append('<div id="show-more"><button id="show-more-button">Show More</button></div>');
   }
+
+  $('#show-more-button').off('click').on('click', function() {
+    // console.log(window.location.search.split(''));
+    var search = window.location.search.split('');
+    for (var i = 0; i < search.length; i++) {
+      if (search[i] === '&' && search[i+1] === 'p' && search[i+2] === '=') {
+        search[i+3] = ++pageNumber;
+      }
+    }
+    console.log(pageNumber);
+    window.location.search = search.join('');
+  });
 });
 
 function getTemplate(templateName) {
